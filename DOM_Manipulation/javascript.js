@@ -14,3 +14,15 @@ const blueText3 = document.createElement("h3");
 blueText3.style.color = "blue";
 blueText3.textContent = "I'm a blue h3!";
 container.appendChild(blueText3);
+
+const divBlackBorderPinkBackground = document.createElement("div");
+divBlackBorderPinkBackground.style.backgroundColor = "pink";
+divBlackBorderPinkBackground.style.border = "solid black";
+container.appendChild(divBlackBorderPinkBackground);
+
+const h1InDiv = document.createElement("h1");
+const pInDiv = document.createElement("p");
+h1InDiv.textContent = "I'm in a div";
+pInDiv.textContent = "ME TOO!";
+divBlackBorderPinkBackground.appendChild(h1InDiv);
+divBlackBorderPinkBackground.appendChild(pInDiv);
