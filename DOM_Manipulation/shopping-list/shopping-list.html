@@ -27,6 +27,27 @@
 
     <ul></ul>
 
-    <script></script>
+    <script>
+      const ul = document.querySelector("ul");
+      const input = document.querySelector("input");
+      const button = document.querySelector("button");
+      button.addEventListener("click", () => {
+        const currentValueOfInput = input.value;
+        input.value = "";
+        const li = document.createElement("li");
+        const span = document.createElement("span");
+        const button = document.createElement("button");
+        li.append(span);
+        li.append(button);
+        span.textContent = currentValueOfInput;
+        button.textContent = "Delete";
+        ul.appendChild(li);
+        button.addEventListener("click", () => {
+          li.remove();
+          input.focus();
+        });
+        input.focus();
+      });
+    </script>
   </body>
 </html>
